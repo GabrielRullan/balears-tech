@@ -1,0 +1,8 @@
+site/
+.firebase/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+node_modules/
