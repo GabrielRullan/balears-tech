@@ -1,0 +1,154 @@
+---
+import { Award, GraduationCap, Briefcase, ExternalLink, Send, ArrowUpRight } from 'lucide-astro';
+
+const companies = [
+  'AstraZeneca',
+  'MAPFRE',
+  'Boehringer Ingelheim',
+  'Movinga',
+  'APSL',
+  'SDG Group'
+];
+---
+
+<section id="perfil" class="py-16 md:py-24 bg-slate-50/70 dark:bg-slate-900/40 relative">
+  <!-- Anchor alias for trajectoria -->
+  <span id="trajectoria" class="sr-only">Trajectòria de Gabriel Rul-lan</span>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Portrait & Credentials Box -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="relative mx-auto max-w-sm lg:max-w-none">
+          <!-- Ambient gradient border -->
+          <div class="absolute -inset-1 bg-gradient-to-tr from-ocean-500 via-teal-500 to-coral-500 rounded-3xl opacity-30 dark:opacity-40 blur-md"></div>
+          
+          <div class="relative bg-white dark:bg-surface-cardDark rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 shadow-elevated">
+            <div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 aspect-square">
+              <img
+                src="/assets/img/gabriel-rullan.jpg"
+                alt="Gabriel Rul-lan - Matemàtic, IT Project Manager i Data Partner"
+                width="400"
+                height="400"
+                class="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 text-white">
+                <p class="font-extrabold text-lg leading-tight">Gabriel Rul-lan</p>
+                <p class="text-xs text-teal-300 font-medium">Matemàtic, PMP® & Data Partner</p>
+              </div>
+            </div>
+
+            <!-- Credentials Badges -->
+            <div class="mt-5 space-y-2.5">
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs">
+                <GraduationCap class="w-4 h-4 text-ocean-600 dark:text-ocean-400 shrink-0" />
+                <span class="text-slate-700 dark:text-slate-200 font-medium">
+                  <strong>Llicenciat en Matemàtiques</strong> (UIB)
+                </span>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs">
+                <Award class="w-4 h-4 text-teal-600 dark:text-teal-400 shrink-0" />
+                <span class="text-slate-700 dark:text-slate-200 font-medium">
+                  <strong>Executive MBA</strong> (ESERP Business School)
+                </span>
+              </div>
+              <div class="flex items-center gap-3 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 text-xs">
+                <Award class="w-4 h-4 text-coral-600 dark:text-coral-400 shrink-0" />
+                <span class="text-slate-700 dark:text-slate-200 font-medium">
+                  <strong>Certificació Oficial PMP®</strong> (PMI Institute)
+                </span>
+              </div>
+            </div>
+
+            <!-- Direct Social Links -->
+            <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-around text-xs font-semibold">
+              <a
+                href="https://www.linkedin.com/in/gabriel-rullan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-ocean-600 dark:text-ocean-400 hover:underline"
+              >
+                <span>LinkedIn</span>
+                <ExternalLink class="w-3 h-3" />
+              </a>
+              <span class="text-slate-300 dark:text-slate-700">|</span>
+              <a
+                href="https://t.me/gabriel_rullan"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-teal-600 dark:text-teal-400 hover:underline"
+              >
+                <span>Telegram @gabriel_rullan</span>
+                <Send class="w-3 h-3" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Narrative of Giving Back -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-ocean-100 text-ocean-800 dark:bg-ocean-950 dark:text-ocean-300 border border-ocean-200 dark:border-ocean-800">
+          <span>🌿 Retorn de Valor a les Illes</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+          Expertesa corporativa internacional al servei de la comunitat balear
+        </h2>
+
+        <div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 space-y-4 text-sm sm:text-base leading-relaxed">
+          <p>
+            Més de <strong>13 anys de trajectòria professional</strong> dirigint projectes d'arquitectura de dades, govern del dada, enginyeria analítica i intel·ligència de negoci per a grans organitzacions i multinacionals de referència.
+          </p>
+
+          <p>
+            Després d'anys liderant grans transformacions per a empreses líders a nivell internacional, neix el compromís cívic de <strong class="text-slate-900 dark:text-white">tornar aquest aprenentatge a les Illes Balears</strong>: democratitzar l'accés a eines modernes de dades i tecnologia, ajudar associacions, entitats juvenils i negocis locals que no tenen pressupostos desorbitats, i fomentar un ecosistema tecnològic insular generós, col·laboratiu i interconnectat.
+          </p>
+        </div>
+
+        <!-- Corporate Track Record Logotypes / Pill Grid -->
+        <div class="pt-2">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2">
+            <Briefcase class="w-3.5 h-3.5 text-ocean-600 dark:text-ocean-400" />
+            Trajectòria en organitzacions de referència:
+          </p>
+          <div class="flex flex-wrap gap-2 sm:gap-2.5">
+            {companies.map((company) => (
+              <span class="px-3 py-1.5 rounded-lg text-xs font-bold bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-2xs">
+                {company}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Call to Action for Community -->
+        <div class="pt-4 flex flex-wrap items-center gap-4">
+          <a
+            href="#contacte"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold bg-ocean-600 hover:bg-ocean-700 text-white shadow-sm transition-colors"
+          >
+            <span>Connecta amb Gabriel</span>
+            <Send class="w-4 h-4" />
+          </a>
+          <a
+            href="https://data-partner.xyz/ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-600 dark:text-teal-400 hover:underline"
+          >
+            <span>Veure trajectòria professional a data-partner.xyz</span>
+            <ArrowUpRight class="w-4 h-4" />
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

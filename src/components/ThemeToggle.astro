@@ -1,0 +1,47 @@
+---
+import { Sun, Moon } from 'lucide-astro';
+
+interface Props {
+  id?: string;
+  class?: string;
+}
+
+const { id = 'theme-toggle', class: className = '' } = Astro.props;
+---
+
+<button
+  id={id}
+  type="button"
+  aria-label="Canvia el tema (clar/fosc)"
+  data-theme-toggle
+  class={`theme-toggle-btn relative inline-flex items-center justify-center p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:text-ocean-600 dark:hover:text-ocean-300 bg-slate-100/80 dark:bg-slate-800/80 hover:bg-slate-200/80 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ocean-500/50 ${className}`}
+>
+  <span class="sr-only">Canvia el tema (clar/fosc)</span>
+  <!-- Sun icon shown when in dark mode (click to switch to light) -->
+  <Sun class="w-5 h-5 hidden dark:block text-amber-400" />
+  <!-- Moon icon shown when in light mode (click to switch to dark) -->
+  <Moon class="w-5 h-5 block dark:hidden text-ocean-700" />
+</button>
+
+<script>
+  function setupThemeToggle() {
+    const buttons = document.querySelectorAll('[data-theme-toggle]');
+    buttons.forEach((btn) => {
+      const el = btn as HTMLElement;
+      if (el.dataset.listenerAttached === 'true') return;
+      el.dataset.listenerAttached = 'true';
+
+      el.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try {
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        } catch (e) {
+          // Graceful fallback for privacy mode / cookies disabled
+        }
+      });
+    });
+  }
+
+  setupThemeToggle();
+  document.addEventListener('astro:after-swap', setupThemeToggle);
+</script>

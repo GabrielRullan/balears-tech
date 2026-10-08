@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://balears-tech.web.app/sitemap-index.xml

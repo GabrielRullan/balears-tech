@@ -1,0 +1,143 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import { Menu, X, MessageSquare } from 'lucide-astro';
+
+const navItems = [
+  { label: 'Inici', href: '#inici' },
+  { label: 'Eixos Cívics', href: '#eixos' },
+  { label: 'Projectes', href: '#projectes' },
+  { label: 'Trajectòria', href: '#perfil' },
+  { label: 'Consultoria', href: '#consultoria' },
+  { label: 'Contacte', href: '#contacte' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/85 dark:bg-surface-dark/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo & Brand Identity -->
+      <a href="#inici" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-ocean-500 rounded-xl p-1">
+        <img
+          src="/assets/img/logo.svg"
+          alt="balears.tech logo"
+          width="38"
+          height="38"
+          class="w-9 h-9 md:w-10 md:h-10 rounded-xl shadow-sm transition-transform duration-200 group-hover:scale-105"
+        />
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            balears<span class="text-teal-600 dark:text-teal-400">.tech</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-widest font-semibold text-ocean-700 dark:text-ocean-300 hidden sm:block">
+            Civic Tech & Voluntariat
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Navegació principal">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-ocean-600 dark:hover:text-ocean-300 hover:bg-slate-100/70 dark:hover:bg-slate-800/70 transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Desktop Right Actions: Bústia button + ThemeToggle -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a
+          href="#contacte"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-ocean-50 text-ocean-700 dark:bg-ocean-950 dark:text-ocean-200 border border-ocean-200 dark:border-ocean-800 hover:bg-ocean-100 dark:hover:bg-ocean-900 transition-all duration-200 shadow-sm"
+        >
+          <MessageSquare class="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+          <span>Bústia Ciutadana</span>
+        </a>
+        <ThemeToggle id="theme-toggle" />
+      </div>
+
+      <!-- Mobile Right Actions: ThemeToggle + Hamburger Button -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <ThemeToggle id="theme-toggle-mobile" class="sm:hidden" />
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          aria-label="Menú de navegació"
+          aria-expanded="false"
+          class="inline-flex items-center justify-center p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-ocean-500"
+        >
+          <span class="sr-only">Obre el menú</span>
+          <Menu id="mobile-icon-menu" class="w-6 h-6 block" />
+          <X id="mobile-icon-close" class="w-6 h-6 hidden" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-surface-dark/95 backdrop-blur-md px-4 pt-2 pb-6 space-y-1 shadow-xl transition-all duration-200"
+  >
+    <div class="flex flex-col space-y-1 pt-2">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="mobile-nav-link px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 dark:text-slate-200 hover:text-ocean-600 dark:hover:text-ocean-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 transition-colors"
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="pt-4 mt-2 border-t border-slate-200 dark:border-slate-800">
+        <a
+          href="#contacte"
+          class="mobile-nav-link flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl text-sm font-semibold bg-coral-500 hover:bg-coral-600 text-white shadow-sm transition-colors text-center"
+        >
+          <MessageSquare class="w-4 h-4" />
+          <span>Proposa una iniciativa / Bústia</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  function setupNavbar() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconMenu = document.getElementById('mobile-icon-menu');
+    const iconClose = document.getElementById('mobile-icon-close');
+
+    if (!btn || !menu) return;
+
+    if (btn.dataset.listenerAttached === 'true') return;
+    btn.dataset.listenerAttached = 'true';
+
+    function toggleMenu() {
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      menu.classList.toggle('hidden');
+      if (iconMenu && iconClose) {
+        iconMenu.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      }
+    }
+
+    btn.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking on any mobile nav link
+    const mobileLinks = menu.querySelectorAll('.mobile-nav-link');
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (!menu.classList.contains('hidden')) {
+          toggleMenu();
+        }
+      });
+    });
+  }
+
+  setupNavbar();
+  document.addEventListener('astro:after-swap', setupNavbar);
+</script>

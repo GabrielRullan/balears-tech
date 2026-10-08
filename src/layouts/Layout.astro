@@ -1,0 +1,74 @@
+---
+import '@fontsource/plus-jakarta-sans';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = 'balears.tech · Iniciativa Balear de Tecnologia, Dades i Impacte Cívic',
+  description = 'Iniciativa cívica i independent per apropar la tecnologia d\'alt nivell, el voluntariat tècnic i les dades obertes a la societat de les Illes Balears. Liderat per Gabriel Rul-lan.',
+  image = '/assets/img/hero.jpg'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://balears.tech');
+---
+
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content="Gabriel Rul-lan" />
+    <meta name="keywords" content="balears tech, tecnologia balears, voluntariat tecnologic, impacte civic, dades obertes, escoltes balears, mallorca tech, gabriel rullan" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="ca_ES" />
+    <meta property="og:site_name" content="balears.tech" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Robust Inline Anti-FOUC Dark Mode Script -->
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-surface-light dark:bg-surface-dark text-slate-800 dark:text-slate-100 min-h-screen flex flex-col font-sans selection:bg-teal-500/25 selection:text-ocean-700 dark:selection:text-teal-200">
+    <slot />
+  </body>
+</html>

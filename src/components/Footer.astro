@@ -1,0 +1,147 @@
+---
+import { ArrowUp, Heart, ExternalLink } from 'lucide-astro';
+---
+
+<footer class="bg-slate-900 text-slate-300 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Brand & Mission Column -->
+      <div class="lg:col-span-5 space-y-4">
+        <a href="#inici" class="flex items-center gap-3">
+          <img
+            src="/assets/img/logo.svg"
+            alt="balears.tech logo"
+            width="36"
+            height="36"
+            class="w-9 h-9 rounded-xl"
+          />
+          <span class="text-xl font-extrabold text-white tracking-tight">
+            balears<span class="text-teal-400">.tech</span>
+          </span>
+        </a>
+        <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
+          Iniciativa cívica i independent per apropar la tecnologia d'alt nivell, les dades obertes i el voluntariat digital a la societat i al teixit de les Illes Balears.
+        </p>
+        <div class="text-xs text-slate-500 pt-2 flex items-center gap-1.5">
+          <span>Fet amb compromís cívic des de Mallorca per a les Balears</span>
+        </div>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <div class="lg:col-span-2 space-y-3">
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Iniciativa</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#inici" class="hover:text-teal-400 transition-colors">Manifest Cívic</a></li>
+          <li><a href="#eixos" class="hover:text-teal-400 transition-colors">Pilars de Suport</a></li>
+          <li><a href="#projectes" class="hover:text-teal-400 transition-colors">Projectes Actius</a></li>
+          <li><a href="#perfil" class="hover:text-teal-400 transition-colors">Trajectòria de Gabriel</a></li>
+          <li><a href="#consultoria" class="hover:text-teal-400 transition-colors">Consultoria Empresarial</a></li>
+        </ul>
+      </div>
+
+      <!-- Ecosystem Subdomains Links -->
+      <div class="lg:col-span-2 space-y-3">
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Ecosistema</p>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href="https://escoltes.balears.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 hover:text-teal-400 transition-colors"
+            >
+              <span>escoltes.balears.tech</span>
+              <ExternalLink class="w-3 h-3" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://jisho.balears.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 hover:text-teal-400 transition-colors"
+            >
+              <span>jisho.balears.tech</span>
+              <ExternalLink class="w-3 h-3" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://data-partner.xyz/ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 hover:text-teal-400 transition-colors"
+            >
+              <span>data-partner.xyz</span>
+              <ExternalLink class="w-3 h-3" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="lg:col-span-3 space-y-3">
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Connecta</p>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href="https://calendar.app.google/YbQTidmXT3Bg9wdY8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-teal-400 transition-colors"
+            >
+              Google Calendar (Cita prèvia)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://t.me/gabriel_rullan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-teal-400 transition-colors"
+            >
+              Telegram @gabriel_rullan
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/gabriel-rullan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-teal-400 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:gabriel@data-partner.xyz"
+              class="hover:text-teal-400 transition-colors"
+            >
+              gabriel@data-partner.xyz
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line & Copyright -->
+    <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p>
+        © 2026 balears.tech · Desenvolupat des de Mallorca per a les Illes Balears. Distribuït sota llicència oberta.
+      </p>
+      <div class="flex items-center gap-4">
+        <a
+          href="#top"
+          class="inline-flex items-center gap-1.5 p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors"
+          aria-label="Torna a dalt de la pàgina"
+        >
+          <span>Torna a dalt</span>
+          <ArrowUp class="w-3.5 h-3.5" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

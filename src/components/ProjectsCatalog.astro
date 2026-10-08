@@ -1,0 +1,194 @@
+---
+import { ExternalLink, Compass, BookOpen, Rocket, ArrowRight } from 'lucide-astro';
+---
+
+<section id="projectes" class="py-16 md:py-24 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-ocean-100 text-ocean-800 dark:bg-ocean-950 dark:text-ocean-300 border border-ocean-200 dark:border-ocean-800">
+        <span>🚀 Ecosistema balears.tech</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Projectes cívics actius i oberts a tothom
+      </h2>
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        Infraestructures digitals públiques, 100% lliures i al servei de la joventut, la cultura i la comunitat balear.
+      </p>
+    </div>
+
+    <!-- Grid of Projects -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1: escoltes.balears.tech -->
+      <div class="flex flex-col justify-between bg-white dark:bg-surface-cardDark rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+        <div>
+          <!-- Thumbnail Image -->
+          <div class="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-800">
+            <img
+              src="/assets/img/escoltes.jpg"
+              alt="escoltes.balears.tech portal de rutes i acampades a Mallorca"
+              width="600"
+              height="350"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-teal-700 dark:text-teal-300 backdrop-blur-xs">
+                Codi Obert
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-ocean-700 dark:text-ocean-300 backdrop-blur-xs">
+                Joventut
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 sm:p-7 space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-teal-600 dark:text-teal-400">
+                  escoltes.balears.tech
+                </span>
+                <Compass class="w-4 h-4 text-slate-400" />
+              </div>
+              <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">
+                Portal d'excursions i acampades per a l'escoltisme
+              </h3>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Plataforma col·laborativa 100% lliure i voluntària. Més de <strong class="font-semibold text-slate-900 dark:text-white">65 rutes catalogades</strong> per unitats escoltes, <strong class="font-semibold text-slate-900 dark:text-white">45 refugis i zones d'acampada legal</strong>, integració de la xarxa de transport TIB, dades d'AEMET i consells d'emergències (112, IBANAT).
+            </p>
+          </div>
+        </div>
+
+        <!-- Card Footer Link -->
+        <div class="p-6 sm:p-7 pt-0 border-t border-slate-100 dark:border-slate-800/80 mt-auto">
+          <a
+            href="https://escoltes.balears.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-sm font-bold bg-ocean-50 hover:bg-ocean-100 dark:bg-ocean-950/80 dark:hover:bg-ocean-900 text-ocean-700 dark:text-ocean-300 transition-colors"
+          >
+            <span>Obrir escoltes.balears.tech</span>
+            <ExternalLink class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: jisho.balears.tech -->
+      <div class="flex flex-col justify-between bg-white dark:bg-surface-cardDark rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+        <div>
+          <!-- Thumbnail Image -->
+          <div class="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-800">
+            <img
+              src="/assets/img/jisho.jpg"
+              alt="jisho.balears.tech diccionari japonès-espanyol lliure"
+              width="600"
+              height="350"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-teal-700 dark:text-teal-300 backdrop-blur-xs">
+                Cloud Run
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-ocean-700 dark:text-ocean-300 backdrop-blur-xs">
+                Dades Obertes
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 sm:p-7 space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-teal-600 dark:text-teal-400">
+                  jisho.balears.tech
+                </span>
+                <BookOpen class="w-4 h-4 text-slate-400" />
+              </div>
+              <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">
+                Murasaki no Jisho — Diccionari japonès obert
+              </h3>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Diccionari obert japonès-espanyol interactiu amb més de <strong class="font-semibold text-slate-900 dark:text-white">34.300 entrades</strong>, kanji, hiragana, rōmaji i pronunciació d'àudio. Arquitectura serverless eficient a Google Cloud Run alimentada per bases de dades lliures internacionals (JMdict, KANJIDIC2 i Tatoeba).
+            </p>
+          </div>
+        </div>
+
+        <!-- Card Footer Link -->
+        <div class="p-6 sm:p-7 pt-0 border-t border-slate-100 dark:border-slate-800/80 mt-auto">
+          <a
+            href="https://jisho.balears.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-sm font-bold bg-ocean-50 hover:bg-ocean-100 dark:bg-ocean-950/80 dark:hover:bg-ocean-900 text-ocean-700 dark:text-ocean-300 transition-colors"
+          >
+            <span>Obrir jisho.balears.tech</span>
+            <ExternalLink class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Incubador de Nous Projectes Cívics -->
+      <div class="flex flex-col justify-between bg-gradient-to-br from-teal-500/10 via-ocean-500/10 to-coral-500/10 dark:from-teal-950/40 dark:via-ocean-950/40 dark:to-slate-900/40 rounded-2xl border-2 border-dashed border-teal-500/40 dark:border-teal-500/30 p-6 sm:p-7 shadow-subtle hover:shadow-elevated transition-all duration-300">
+        <div class="space-y-5">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-teal-500 text-white shadow-xs">
+              Crida Oberta
+            </span>
+            <Rocket class="w-6 h-6 text-teal-600 dark:text-teal-400" />
+          </div>
+
+          <div>
+            <span class="text-xs font-mono font-semibold text-teal-600 dark:text-teal-400">
+              *.balears.tech
+            </span>
+            <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">
+              Incubador de Nous Projectes Cívics
+            </h3>
+            <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">
+              Tens una iniciativa d'interès públic per a les Balears?
+            </p>
+          </div>
+
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            Allotgem i acompanyem el teu projecte cívic. Oferim allotjament gratuït, subdomini propi sota <strong class="font-mono text-xs font-bold text-ocean-700 dark:text-ocean-300">*.balears.tech</strong>, arquitectura estàtica o serverless (Firebase Hosting / Cloud Run) i assessorament tècnic per a iniciatives ciutadanes, culturals o educatives sense ànim de lucre.
+          </p>
+
+          <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300">
+            <li class="flex items-center gap-2">
+              <span class="text-teal-600 dark:text-teal-400 font-bold">✓</span>
+              <span>Hosting i subdomini 100% de franc</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-teal-600 dark:text-teal-400 font-bold">✓</span>
+              <span>Assessorament d'arquitectura web i dades</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-teal-600 dark:text-teal-400 font-bold">✓</span>
+              <span>Visibilitat i difusió comunitària</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-teal-500/20">
+          <a
+            href="#contacte"
+            class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-sm transition-colors"
+          >
+            <span>Sol·licita un subdomini cívic</span>
+            <ArrowRight class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

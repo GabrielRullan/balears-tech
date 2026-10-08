@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import CivicPillars from '../components/CivicPillars.astro';
+import Stats from '../components/Stats.astro';
+import ProjectsCatalog from '../components/ProjectsCatalog.astro';
+import GabrielBio from '../components/GabrielBio.astro';
+import Consulting from '../components/Consulting.astro';
+import ContactHub from '../components/ContactHub.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="balears.tech · Iniciativa Balear de Tecnologia, Dades i Impacte Cívic"
+  description="Iniciativa cívica i independent per apropar la tecnologia d'alt nivell, el voluntariat tècnic i les dades obertes a la societat de les Illes Balears. Liderat per Gabriel Rul-lan."
+>
+  <Navbar />
+  
+  <main id="top" class="flex-1">
+    <Hero />
+    <CivicPillars />
+    <Stats />
+    <ProjectsCatalog />
+    <GabrielBio />
+    <Consulting />
+    <ContactHub />
+  </main>
+
+  <Footer />
+</Layout>

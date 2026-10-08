@@ -1,0 +1,123 @@
+---
+import { HeartHandshake, Code2, Lightbulb, ArrowRight, CheckCircle2 } from 'lucide-astro';
+
+const pillars = [
+  {
+    icon: HeartHandshake,
+    accentColor: 'text-teal-600 dark:text-teal-400',
+    badgeBg: 'bg-teal-50 text-teal-700 dark:bg-teal-950/60 dark:text-teal-300 border-teal-200 dark:border-teal-800',
+    title: 'Suport Pro-bono & Acompanyament Tècnic',
+    subtitle: 'Per a entitats socials, associacions juvenils i negocis locals',
+    audience: 'Entitats del tercer sector, associacions culturals, cooperatives i petits negocis',
+    description:
+      'Auditem necessitats reals, ajudem a triar eines gratuïtes o lliures per no pagar llicències innecessàries, configurem presència web eficient i automatitzem tasques administratives repetitives.',
+    motto: 'Sense cost, sense tecnicismes incomprensibles, amb acompanyament proper i humà.',
+    actionLabel: 'Demana suport pro-bono',
+    actionHref: '#contacte'
+  },
+  {
+    icon: Code2,
+    accentColor: 'text-ocean-600 dark:text-ocean-400',
+    badgeBg: 'bg-ocean-50 text-ocean-700 dark:bg-ocean-950/60 dark:text-ocean-300 border-ocean-200 dark:border-ocean-800',
+    title: 'Col·laboració en Codi Obert (Tech Commons)',
+    subtitle: 'Per a desenvolupadors, estudiants i la comunitat tècnica',
+    audience: 'Estudiants d\'informàtica, enginyers, dissenyadors i entusiastes de la tecnologia',
+    description:
+      'Creem solucions d\'utilitat pública amb codi obert: repositoris lliures, arquitectures al núvol eficients i dades obertes. Un punt de trobada per aprendre, col·laborar i construir plegats eines útils per a la comunitat.',
+    motto: 'Tecnologia feta per la comunitat, propietat de la comunitat.',
+    actionLabel: 'Explora els projectes lliures',
+    actionHref: '#projectes'
+  },
+  {
+    icon: Lightbulb,
+    accentColor: 'text-coral-600 dark:text-coral-400',
+    badgeBg: 'bg-coral-50 text-coral-700 dark:bg-coral-950/60 dark:text-coral-300 border-coral-200 dark:border-coral-800',
+    title: 'Bústia Ciutadana d\'Idees i Propostes',
+    subtitle: 'Directe per a qualsevol ciutadà, docent o col·lectiu de les illes',
+    audience: 'Qualsevol ciutadà o col·lectiu amb una inquietud o necessitat detectada a les illes',
+    description:
+      'Canal directe i àgil per analitzar idees: si detectes un problema al teu municipi o sector que es pugui millorar amb dades públiques o una eina digital senzilla, l\'avaluem conjuntament i l\'ajudem a néixer.',
+    motto: 'La teva proposta té espai: analitzem la viabilitat tècnica i t\'ajudem a engegar-la.',
+    actionLabel: 'Envia la teva proposta',
+    actionHref: '#contacte'
+  }
+];
+---
+
+<section id="eixos" class="py-16 md:py-24 bg-slate-50/70 dark:bg-slate-900/40 relative">
+  <!-- Anchor alias for pilars -->
+  <span id="pilars" class="sr-only">Pilars de Col·laboració Activa</span>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+        <span>🤝 Eixos d'Acció Cívica</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Com fem tangible el voluntariat tecnològic?
+      </h2>
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        No ens quedem en declaracions teòriques. Oferim tres canals reals i concrets de retorn social per enfortir el teixit associatiu, juvenil i ciutadà de les Illes Balears.
+      </p>
+    </div>
+
+    <!-- 3 Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {pillars.map((pillar) => {
+        const Icon = pillar.icon;
+        return (
+          <div class="flex flex-col justify-between bg-white dark:bg-surface-cardDark rounded-2xl p-7 md:p-8 border border-slate-200/80 dark:border-slate-800 shadow-subtle hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
+            <div class="space-y-5">
+              
+              <!-- Icon & Badge -->
+              <div class="flex items-center justify-between">
+                <div class="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200/60 dark:border-slate-700/60 shadow-xs">
+                  <Icon class={`w-7 h-7 ${pillar.accentColor}`} />
+                </div>
+                <span class={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${pillar.badgeBg}`}>
+                  Pilar Cívic
+                </span>
+              </div>
+
+              <!-- Title & Subtitle -->
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-snug">
+                  {pillar.title}
+                </h3>
+                <p class="mt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                  {pillar.subtitle}
+                </p>
+              </div>
+
+              <!-- Description -->
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                {pillar.description}
+              </p>
+
+              <!-- Motto Quote -->
+              <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border-l-4 border-ocean-500 text-xs italic text-slate-700 dark:text-slate-300">
+                "{pillar.motto}"
+              </div>
+
+            </div>
+
+            <!-- Action Link -->
+            <div class="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80">
+              <a
+                href={pillar.actionHref}
+                class="inline-flex items-center gap-2 text-sm font-bold text-ocean-600 dark:text-ocean-400 hover:text-ocean-700 dark:hover:text-ocean-300 group"
+              >
+                <span>{pillar.actionLabel}</span>
+                <ArrowRight class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </a>
+            </div>
+
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
