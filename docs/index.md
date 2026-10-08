@@ -5,82 +5,25 @@ hide:
 ---
 
 <div class="bt-hero">
-  <div>
-    <div class="bt-pill">
-      <span>🌊</span> Iniciativa Balear de Tecnologia i Dades
-    </div>
-    <h1 class="bt-hero-title">
-      Tecnologia, dades i futur per a les <span>Illes Balears</span>
-    </h1>
-    <p class="bt-hero-desc">
-      <strong>balears.tech</strong> és un projecte balear per ajudar les empreses locals a créixer amb la tecnologia i les dades. Combinam consultoria tecnològica d'alt nivell per al teixit productiu de les illes amb el desenvolupament de projectes altruistes i de codi obert al servei de la comunitat.
-    </p>
-    <div class="bt-hero-actions">
-      <a href="#serveis-per-a-empreses" class="bt-btn-primary">
-        <span>💼</span> Consultoria per a empreses
-      </a>
-      <a href="#projectes-actius" class="bt-btn-secondary">
-        <span>🚀</span> Explorar projectes actius
-      </a>
-    </div>
-    <div class="bt-islands-bar">
-      <span>📍 Mallorca</span>
-      <span>•</span>
-      <span>Menorca</span>
-      <span>•</span>
-      <span>Eivissa</span>
-      <span>•</span>
-      <span>Formentera</span>
-    </div>
+  <div class="bt-pill">
+    <span>🌊</span> Iniciativa Balear de Tecnologia i Dades
   </div>
-  <div class="bt-hero-img-wrap">
-    <img src="assets/img/hero.jpg" alt="balears.tech - Tecnologia a les Illes Balears" />
-    <div class="bt-hero-floating-badge">
-      <span style="font-size: 1.3rem;">⚡</span>
-      <div>
-        <strong>Impacte local real</strong><br>
-        <small style="color: #64748b;">Consultoria àgil & projectes oberts</small>
-      </div>
-    </div>
+  <h1 class="bt-hero-title">
+    Tecnologia, dades i futur per a les <span>Illes Balears</span>
+  </h1>
+  <p class="bt-hero-desc">
+    <strong>balears.tech</strong> és un projecte balear per ajudar les empreses locals a créixer amb la tecnologia i les dades. Combinam consultoria tecnològica d'alt nivell per al teixit productiu de les illes amb el desenvolupament de projectes altruistes i de codi obert al servei de la comunitat.
+  </p>
+  <div class="bt-islands-bar">
+    <span>📍 Mallorca</span>
+    <span>•</span>
+    <span>Menorca</span>
+    <span>•</span>
+    <span>Eivissa</span>
+    <span>•</span>
+    <span>Formentera</span>
   </div>
 </div>
-
----
-
-<h2 id="model" style="text-align: center; margin-top: 3.5rem; font-size: 2.1rem; font-weight: 800; color: #003d69;">
-  Un model tecnològic arrelat a les Illes
-</h2>
-<p style="text-align: center; max-width: 680px; margin: 0 auto 2.5rem; color: #5b6b79; font-size: 1.05rem;">
-  Apostam per la proximitat, la qualitat tècnica i el retorn de valor al territori balear.
-</p>
-
-<div class="bt-grid-3">
-  <div class="bt-feature-card">
-    <div class="bt-feature-icon">📊</div>
-    <h3 style="margin-top: 0; font-size: 1.25rem; font-weight: 700; color: #003d69;">Consultoria per a PIMEs locals</h3>
-    <p style="color: #5b6b79; line-height: 1.6; font-size: 0.95rem;">
-      Les grans consultores sovint no s'adapten a la realitat ni als pressupostos de les empreses balears. Oferim solucions de Business Intelligence, enginyeria de dades i estratègia tecnològica a mida, sense dependències innecessàries.
-    </p>
-  </div>
-
-  <div class="bt-feature-card">
-    <div class="bt-feature-icon">🌿</div>
-    <h3 style="margin-top: 0; font-size: 1.25rem; font-weight: 700; color: #003d69;">Projectes oberts i altruistes</h3>
-    <p style="color: #5b6b79; line-height: 1.6; font-size: 0.95rem;">
-      Creiem fermament en retornar coneixement a la societat. Desenvolupam iniciatives de codi obert i eines públiques per a la joventut, la natura, l'educació i el teixit associatiu insular.
-    </p>
-  </div>
-
-  <div class="bt-feature-card">
-    <div class="bt-feature-icon">⚙️</div>
-    <h3 style="margin-top: 0; font-size: 1.25rem; font-weight: 700; color: #003d69;">Sobirania i eficiència digital</h3>
-    <p style="color: #5b6b79; line-height: 1.6; font-size: 0.95rem;">
-      Empram arquitectures modernes al núvol (Cloud Run, Python, SQL, eines obertes) per construir solucions lleugeres, ràpides i sense llicències desmesurades que lliguin la teva organització.
-    </p>
-  </div>
-</div>
-
----
 
 <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-top: 3.5rem; margin-bottom: 1.5rem;">
   <div>
