@@ -1,5 +1,5 @@
 ---
-import { ExternalLink, Compass, BookOpen, Rocket, ArrowRight } from 'lucide-astro';
+import { ExternalLink, Compass, BookOpen, Rocket, ArrowRight, ShieldCheck, Github } from 'lucide-astro';
 ---
 
 <section id="projectes" class="py-16 md:py-24 relative">
@@ -135,24 +135,96 @@ import { ExternalLink, Compass, BookOpen, Rocket, ArrowRight } from 'lucide-astr
         </div>
       </div>
 
-      <!-- Card 3: Incubador de Nous Projectes Cívics -->
-      <div class="flex flex-col justify-between bg-gradient-to-br from-teal-500/10 via-ocean-500/10 to-coral-500/10 dark:from-teal-950/40 dark:via-ocean-950/40 dark:to-slate-900/40 rounded-2xl border-2 border-dashed border-teal-500/40 dark:border-teal-500/30 p-6 sm:p-7 shadow-subtle hover:shadow-elevated transition-all duration-300">
-        <div class="space-y-5">
-          <div class="flex items-center justify-between">
+      <!-- Card 3: dni.balears.tech (ProtegeDNI) -->
+      <div class="flex flex-col justify-between bg-white dark:bg-surface-cardDark rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-subtle hover:shadow-elevated transition-all duration-300 overflow-hidden group">
+        <div>
+          <!-- Thumbnail Image -->
+          <div class="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-800">
+            <img
+              src="/assets/img/dni.jpg"
+              alt="dni.balears.tech ProtegeDNI anonimitzador segur de DNI de codi obert"
+              width="600"
+              height="350"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-teal-700 dark:text-teal-300 backdrop-blur-xs">
+                Codi Obert
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-ocean-700 dark:text-ocean-300 backdrop-blur-xs">
+                Privadesa AEPD
+              </span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-white/90 dark:bg-slate-900/90 text-coral-700 dark:text-coral-300 backdrop-blur-xs">
+                100% Local
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="p-6 sm:p-7 space-y-4">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-teal-600 dark:text-teal-400">
+                  dni.balears.tech
+                </span>
+                <ShieldCheck class="w-4 h-4 text-teal-500" />
+              </div>
+              <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">
+                ProtegeDNI — Anonimització i privadesa local
+              </h3>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Filtre i ofuscador segur de documents d'identitat (DNI) per compartir còpies protegides segons recomanacions de l'<strong class="font-semibold text-slate-900 dark:text-white">AEPD</strong> i Policia Nacional. Pixelat i desenfocament de signatura, CAN, número de suport i MRZ, marques d'aigua de finalitat i conversió B/N. <strong class="font-semibold text-slate-900 dark:text-white">Zero servidors</strong>: processament en memòria al navegador.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card Footer Links -->
+        <div class="p-6 sm:p-7 pt-0 border-t border-slate-100 dark:border-slate-800/80 mt-auto space-y-2">
+          <a
+            href="https://dni.balears.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-sm font-bold bg-ocean-50 hover:bg-ocean-100 dark:bg-ocean-950/80 dark:hover:bg-ocean-900 text-ocean-700 dark:text-ocean-300 transition-colors"
+          >
+            <span>Obrir dni.balears.tech</span>
+            <ExternalLink class="w-4 h-4" />
+          </a>
+          <a
+            href="https://github.com/GabrielRullan/dni-blur"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-between w-full px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors"
+          >
+            <span class="inline-flex items-center gap-1.5">
+              <Github class="w-3.5 h-3.5" />
+              <span>Codi a GitHub (GabrielRullan/dni-blur)</span>
+            </span>
+            <ExternalLink class="w-3 h-3 text-slate-400" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: Incubador de Nous Projectes Cívics -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 bg-gradient-to-br from-teal-500/10 via-ocean-500/10 to-coral-500/10 dark:from-teal-950/40 dark:via-ocean-950/40 dark:to-slate-900/40 rounded-2xl border-2 border-dashed border-teal-500/40 dark:border-teal-500/30 p-6 sm:p-7 lg:p-8 shadow-subtle hover:shadow-elevated transition-all duration-300 md:col-span-2 lg:col-span-3">
+        <div class="space-y-4 max-w-3xl">
+          <div class="flex items-center gap-3">
             <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-teal-500 text-white shadow-xs">
               Crida Oberta
             </span>
-            <Rocket class="w-6 h-6 text-teal-600 dark:text-teal-400" />
-          </div>
-
-          <div>
             <span class="text-xs font-mono font-semibold text-teal-600 dark:text-teal-400">
               *.balears.tech
             </span>
-            <h3 class="mt-1 text-xl font-bold text-slate-900 dark:text-white">
+            <Rocket class="w-5 h-5 text-teal-600 dark:text-teal-400 ml-auto sm:ml-0" />
+          </div>
+
+          <div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
               Incubador de Nous Projectes Cívics
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1">
+            <p class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">
               Tens una iniciativa d'interès públic per a les Balears?
             </p>
           </div>
@@ -161,7 +233,7 @@ import { ExternalLink, Compass, BookOpen, Rocket, ArrowRight } from 'lucide-astr
             Allotgem i acompanyem el teu projecte cívic. Oferim allotjament gratuït, subdomini propi sota <strong class="font-mono text-xs font-bold text-ocean-700 dark:text-ocean-300">*.balears.tech</strong>, arquitectura estàtica o serverless (Firebase Hosting / Cloud Run) i assessorament tècnic per a iniciatives ciutadanes, culturals o educatives sense ànim de lucre.
           </p>
 
-          <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300">
+          <ul class="text-xs grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 text-slate-600 dark:text-slate-300 pt-1">
             <li class="flex items-center gap-2">
               <span class="text-teal-600 dark:text-teal-400 font-bold">✓</span>
               <span>Hosting i subdomini 100% de franc</span>
@@ -177,10 +249,10 @@ import { ExternalLink, Compass, BookOpen, Rocket, ArrowRight } from 'lucide-astr
           </ul>
         </div>
 
-        <div class="pt-6 mt-6 border-t border-teal-500/20">
+        <div class="lg:shrink-0 lg:pl-6 pt-4 lg:pt-0 border-t lg:border-t-0 lg:border-l border-teal-500/20 flex flex-col justify-center">
           <a
             href="#contacte"
-            class="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-sm transition-colors"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-bold bg-teal-600 hover:bg-teal-700 text-white shadow-sm transition-colors text-center whitespace-nowrap"
           >
             <span>Sol·licita un subdomini cívic</span>
             <ArrowRight class="w-4 h-4" />

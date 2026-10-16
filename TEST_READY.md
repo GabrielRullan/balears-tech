@@ -55,7 +55,7 @@ TOTAL SUITE                                    241         0       241
 - [x] **F12: Three Collaboration Pillars**: Pro-bono support, Tech Commons open source, Citizen proposal inbox.
 - [x] **F13: Community Impact Metrics**: +13 yrs corporate experience, +65 routes in escoltes, +34.000 jisho entries, 4 islands.
 - [x] **F14: Gabriel Rul-lan Profile**: Corporate track record (AstraZeneca, MAPFRE, Boehringer, Movinga, APSL, SDG Group), UIB Maths, ESERP MBA, PMP.
-- [x] **F15: Community Projects Catalog**: `escoltes.balears.tech` (routes, shelters, TIB, AEMET) and `jisho.balears.tech` (Cloud Run, JMdict).
+- [x] **F15: Community Projects Catalog**: `escoltes.balears.tech` (routes, shelters, TIB, AEMET), `jisho.balears.tech` (Cloud Run, JMdict) and `dni.balears.tech` / `GabrielRullan/dni-blur` (ProtegeDNI privacy filter).
 - [x] **F16: Subdomains Incubator Call**: `*.balears.tech` free hosting and technical guidance for civic non-profit projects.
 - [x] **F17: Consulting Complement Block**: Commercial data consulting (`data-partner.xyz`) located at page bottom, sustaining civic volunteering.
 - [x] **F18: Direct Contact Channels & Citizen Form**: Google Calendar, Telegram, email, phone, and `#citizen-form` with mailto encoding.

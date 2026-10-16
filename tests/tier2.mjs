@@ -345,10 +345,16 @@ export function runTier2Boundaries(ctx, runner) {
     assert(a, 'escoltes.balears.tech anchor missing');
     assertEqual(a.rel, 'noopener noreferrer', 'rel must be noopener noreferrer');
   });
-  runner.test('F15.B2: jisho.balears.tech link is secure HTTPS', () => {
+  runner.test('F15.B2: jisho.balears.tech and dni.balears.tech links are secure HTTPS', () => {
     const a = ctx.dom.anchors.find((a) => a.href === 'https://jisho.balears.tech');
     assert(a, 'jisho.balears.tech anchor missing');
     assertEqual(a.rel, 'noopener noreferrer', 'rel must be noopener noreferrer');
+    const dni = ctx.dom.anchors.find((a) => a.href === 'https://dni.balears.tech');
+    assert(dni, 'dni.balears.tech anchor missing');
+    assertEqual(dni.rel, 'noopener noreferrer', 'dni rel must be noopener noreferrer');
+    const gh = ctx.dom.anchors.find((a) => a.href === 'https://github.com/GabrielRullan/dni-blur');
+    assert(gh, 'GabrielRullan/dni-blur anchor missing');
+    assertEqual(gh.rel, 'noopener noreferrer', 'gh rel must be noopener noreferrer');
   });
   runner.test('F15.B3: escoltes card details 65 routes and 45 shelters', () => {
     assertIncludes(ctx.distHtml, '65 rutes catalogades', '65 rutes detail missing');

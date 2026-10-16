@@ -316,6 +316,8 @@ export function runTier1Features(ctx, runner) {
   // F15: Community Projects Catalog
   runner.test('F15.1: Section #projectes exists in DOM', () => {
     assert(ctx.dom.elementsWithId.has('projectes'), 'Section #projectes must exist');
+    assertIncludes(ctx.distHtml, 'dni.balears.tech', 'dni.balears.tech missing');
+    assertIncludes(ctx.distHtml, 'https://github.com/GabrielRullan/dni-blur', 'GabrielRullan/dni-blur missing');
   });
   runner.test('F15.2: escoltes.balears.tech card with thumbnail and title', () => {
     assertIncludes(ctx.distHtml, '/assets/img/escoltes.jpg', 'Escoltes thumbnail missing');
